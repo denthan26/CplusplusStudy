@@ -1,10 +1,40 @@
 #include <iostream>
+int fun(int x)
+{
+    int countx = 0;
+    while (x)
+    {
+        countx++;
+        x = x & (x - 1);
+    }
+    return countx;
+}
 int main()
 {
-	int i, & ri = i;
-	i = 5;
-	ri = 10;
-	std::cout << i << ' ' << ri << std::endl;
+    int x = 500;
+    int ret = fun(x);
+    std::cout << ret;
+}
+//void Func(char str_arg[100])
+//{
+//    printf("%d\n", sizeof(str_arg));
+//}
+//int main(void)
+//{
+//    char str[] = "Hello";
+//    printf("%d\n", sizeof(str));
+//    printf("%d\n", strlen(str));
+//    char* p = str;
+//    printf("%d\n", sizeof(p));
+//    Func(str);
+//}
+#include <iostream>
+//int main()
+//{
+	//int i, & ri = i;
+	//i = 5;
+	//ri = 10;
+	//std::cout << i << ' ' << ri << std::endl;
 	//int i = 0, & r1 = i;
 	//double d = 0, & r2 = d;
 	//if (r2 == 3.14159)
@@ -24,10 +54,10 @@ int main()
 	int i3 = 1024, & ri = i3;
 	int& r3 = i3, & r4 = i2;*/
 	/*int ival = 1024;
-	int& refVal = ival;
-	refVal = 2;
-	int ii = refVal;
-	std::cout << ival << ' ' << ii << std::endl;*/
+	//int& refVal = ival;
+	//refVal = 2;
+	//int ii = refVal;
+	//std::cout << ival << ' ' << ii << std::endl;*/
 	//int& refVal2;
 	/*int i = 100, sum = 0;
 	for (int i = 0; i != 10; ++i)
@@ -35,8 +65,8 @@ int main()
 		sum += i;
 	}
 	std::cout << i << ' ' << sum << std::endl;*/
-	return 0;
-}
+	//return 0;
+//}
 //int i = 42;
 //int main()
 //{
